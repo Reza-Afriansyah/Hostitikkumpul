@@ -6,8 +6,100 @@
   <title>Sport Arena - Pilih Lapangan</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    /* HEADER (navbar) */
+    .navbar {
+      background-color: #1f344a;
+      color: #fff;
+      padding: 15px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      margin: auto;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-menu a:hover {
+      color: #00bcd4;
+    }
+
+    .admin-link {
+      background-color: #e74c3c;
+      padding: 6px 12px;
+      border-radius: 6px;
+      color: #fff !important;
+    }
+
+    .admin-link:hover {
+      background-color: #c0392b;
+    }
+
+    /* HAMBURGER menu (untuk mobile) */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      border-radius: 2px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #1f344a;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        text-align: right;
+        padding: 15px;
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
 </head>
-    
 <body>
   <!-- Header -->
   <header>
@@ -432,7 +524,4 @@
     <script src="HalamanUtama.js"></script>
 </body>
 </html>
-
-
-
 
