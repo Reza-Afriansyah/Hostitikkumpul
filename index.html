@@ -1,76 +1,128 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TITIK KUMPUL SPORTAINMENT</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-      /* Tambahkan style navbar langsung di sini agar tetap tampil meski CSS gagal dimuat */
-      .navbar {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sport Arena - Pilih Lapangan</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* HEADER (navbar) */
+    .navbar {
+      background-color: #1f344a;
+      color: #fff;
+      padding: 15px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      margin: auto;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-menu a:hover {
+      color: #00bcd4;
+    }
+
+    .admin-link {
+      background-color: #e74c3c;
+      padding: 6px 12px;
+      border-radius: 6px;
+      color: #fff !important;
+    }
+
+    .admin-link:hover {
+      background-color: #c0392b;
+    }
+
+    /* HAMBURGER menu (untuk mobile) */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      border-radius: 2px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        flex-direction: column;
         background-color: #1f344a;
-        padding: 15px 0;
-        color: #fff;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        text-align: right;
+        padding: 15px;
       }
-      .navbar .container {
+
+      .nav-menu.active {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 90%;
-        margin: auto;
       }
-      .logo {
-        font-size: 22px;
-        font-weight: bold;
-      }
-      .nav-links {
-        list-style: none;
+
+      .hamburger {
         display: flex;
-        gap: 20px;
       }
-      .nav-links a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: 500;
-        transition: 0.3s;
-      }
-      .nav-links a:hover {
-        color: #00bcd4;
-      }
-      .btn-admin {
-        background-color: #e74c3c;
-        padding: 6px 12px;
-        border-radius: 6px;
-        color: #fff !important;
-      }
-      .btn-admin:hover {
-        background-color: #c0392b;
-      }
-    </style>
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <h1 class="logo">TITIK KUMPUL SPORTAINMENT</h1>
-                <ul class="nav-menu">
-                    <li><a href="#home">Beranda</a></li>
-                    <li><a href="#badminton-facilities">Badminton</a></li>
-                    <li><a href="#minisoccer-facilities">Mini Soccer</a></li>
-                    <li><a href="#booking-info">Cara Booking</a></li>
-                    <li><a href="#contact">Kontak</a></li>
-                    <li><a href="Login.html" class="admin-link">Admin</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <h1 class="logo">Sport Arena</h1>
+        <ul class="nav-menu">
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#badminton-facilities">Badminton</a></li>
+          <li><a href="#minisoccer-facilities">Mini Soccer</a></li>
+          <li><a href="#booking-info">Cara Booking</a></li>
+          <li><a href="#contact">Kontak</a></li>
+          <li><a href="Login.html" class="admin-link">Admin</a></li>
+        </ul>
+        <div class="hamburger" onclick="document.querySelector('.nav-menu').classList.toggle('active')">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
 
     <!-- Hero Section -->
     <section id="home" class="sport-selection">
