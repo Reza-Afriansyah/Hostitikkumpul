@@ -9,6 +9,7 @@
     justify-content: center;
     background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95)), 
                 url('https://images.unsplash.com/photo-1540753003857-32e3d2c7c372?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+}
 /* Navbar */
 .navbar {
   background-color: #1f344a;
@@ -1175,4 +1176,5 @@ footer {
     margin: 5px 0;
     font-weight: 600;
 }
+
 
